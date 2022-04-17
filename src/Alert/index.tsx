@@ -1,28 +1,28 @@
-import type { PropsWithChildren } from 'react';
-import React from 'react';
+import type { PropsWithChildren } from "react";
 
 export interface AlertProps {
-  type?: 'info' | 'positive' | 'negative' | 'warning';
+  type?: "info" | "positive" | "negative" | "warning";
 }
 
-export type KindMap = Record<Required<AlertProps>['type'], string>;
+export type KindMap = Record<Required<AlertProps>["type"], string>;
 
-const prefixCls = 'happy-alert';
+const prefixCls = "happy-alert";
 
 const kinds: KindMap = {
-  info: '#5352ED',
-  positive: '#2ED573',
-  negative: '#FF4757',
-  warning: '#FFA502',
+  info: "#5352ED",
+  positive: "#2ED573",
+  negative: "#FF4757",
+  warning: "#FFA502"
 };
 
 const Alert = (props: PropsWithChildren<AlertProps>) => {
-  const { type = 'info', children, ...rest } = props;
+  const { type = "info", children, ...rest } = props;
+
   return (
     <div
       className={prefixCls}
       style={{
-        background: kinds[type],
+        background: kinds[type]
       }}
       {...rest}
     >

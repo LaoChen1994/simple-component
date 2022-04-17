@@ -1,5 +1,11 @@
-const fabric = require("@umijs/fabric")
-
 module.exports = {
-    ...fabric.prettier
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": false,
+    "semi": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "parser": "babel",
+    "endOfLine": "auto"
 }
